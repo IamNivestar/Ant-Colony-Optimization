@@ -393,8 +393,11 @@ if __name__ == "__main__":
 	aco = ACO(n_iterations=10, strategy='AS', ants_porcent= 3, test_number=3, alpha = 1,
 		beta = 5, rho = 0.3, Q = 10000, W=10, zeta=0.6)
 
-	aco.run()
-	#calibrate()
+	Calibrate = False
+	if Calibrate:
+		calibrate()
+	else:
+		aco.run()
 
 	end = time.time() #user
 	user_time = end - start 
